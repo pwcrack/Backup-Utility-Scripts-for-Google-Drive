@@ -18,13 +18,13 @@ In order to not run out of space on Google Drive, I have regularly scheduled bat
 
 https://productforums.google.com/forum/#!topic/drive/_pkbcBOHjKo;context-place=topicsearchin/drive/automatically$20delete$20from$20trash
 
-This project includes a python script called emptytrash.py that can be run as a scheduled task or a chron job that will empty the trash, resolving this issue.
+This project includes a python script called emptytrash.py that can be run as a scheduled task or a cron job that will empty the trash, resolving this issue.
 
 # Google Drive does not provide data integrity checking of synched files
 
 It is very important to me that after I have synched all of my files, that I be able to validate the integrity of these files.  I wanted to be able to compare the hashes of the files in the cloud with the hashes of the files stored locally.
 
-This project includes a python script called validate_drive_hashes.py that can be run as a scheduled task or a chron job that will compare these hashes and send me an email confirmation including success or failure.
+This project includes a python script called validate_drive_hashes.py that can be run as a scheduled task or a cron job that will compare these hashes and send me an email confirmation including success or failure.
 
 # Google Drive API
 
@@ -38,8 +38,8 @@ https://developers.google.com/drive/v2/web/about-sdk
 
 # Additional Notes
 
-If Google Drive is actively uploading files when you run the validate_drive_hashes.py script, then the files will fail validation until they are fully synched.  Adjust the timing of your scheduled task or chron job so that you can be sure that the files should have completed uploading when the script is run.
+If Google Drive is actively uploading files when you run the validate_drive_hashes.py script, then the files will fail validation until they are fully synched.  Adjust the timing of your scheduled task or cron job so that you can be sure that the files should have completed uploading when the script is run.
 
 The validate_drive_hashes.py script is hard-coded with email details as well as the path of the local root folder of the Google Drive, so you will need to be update the script for your environment before you run it on your system.
 
-These are sample proof-of-concept scripts.  I am not a very good coder, so there are a lot of details that I have left out of these.  Most of this was taken from other examples I found on the web and I claim no original authorship of this code.  I'd thank and acknowledge those that contributed the originals, but I didn't record that information.  I take no responsibility for how you use these scripts in your own environment and you need to judge their suitability for your application or function.  If you would like to suggest changes/update or would like git commit permissions to this project, please contact me.
+These are sample proof-of-concept scripts.  I am not a very good coder, so there are a lot of details that I have left out of these.  Most of this was taken from other examples I found on the web and I claim no original authorship of this code.  I'd thank and acknowledge those that contributed the originals, but I didn't record that information.  I take no responsibility for how you use these scripts in your own environment and you need to judge their suitability for your application or function.  If you would like to suggest changes/updates or would like git commit permissions to this project, please contact me.
